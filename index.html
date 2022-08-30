@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <h3 onclick="mensagem()">Trabalhando com javascript</h3>
+    <h5 onclick="escreverTexto()">Clique aqui para adicionar um texto</h5>
+    <h1 Trabalho com javascript></h1>
+   
+    <input id="txtNumero1" type="number" value="">
+    <input id="txtNumero2" type="number" value="">
+    <input type="button" onclick="somar()" value="Somar">
+    <input type="button" onclick="subtrair()" value="Subtrair">
+        <br><br>
+        <input id="txtResultado"  type="number" value="">
+        <h5 id="iblResultado">Resultado</h5>
+  
+    <h3>Tabuada</h3>
+    <input  id="txtTabuada" type="number" min="1" max="10" value="">
+    <input type="button" onclick="tabuada()" value="Calcular Tabuada">
+    <br><span id="iblTabuada">Tabuada</span>
+    <hr>
+
+
+    
+    <script>
+
+
+        function tabuada(){
+            var numTabuada = document.getElementById("txtTabuada").value
+           
+            if (!isNaN(parseInt(numTabuada))){
+               var resTabuada = "";  
+            
+        for (var i = 0; i <= 10; i++ ){
+            resTabuada += "<b>" + i + "x" + numTabuada + "=</b>" +  (numTabuada * i ) + "<br>";
+            
+
+        }
+        document.getElementById("iblTabuada").innerHTML = resTabuada;
+
+
+        } else {
+            alert("Informe um numero valido");
+        }
+
+        function somar(){
+            var valornumero1 = document.getElementById('txtNumero1').value
+            var valornumero2 = document.getElementById('txtNumero2').value
+            var soma= parseInt(valornumero1) + parseInt(valornumero2)
+            alert("SOMA = " + soma);
+            
+            document.getElementById('txtResultado').value = soma
+        document.getElementById('iblResultado').innerText = 'Resultado: ' + soma
+
+
+        }
+       
+
+        function subtrair(){
+            var valornumero1 = document.getElementById('txtNumero1').value
+            var valornumero2 = document.getElementById('txtNumero2').value
+            var subtrair= parseInt(valornumero1) - parseInt(valornumero2)
+            alert("Subtrair = " + subtrair);
+            
+            document.getElementById('txtResultado').value = subtrair
+        document.getElementById('iblResultado').innerText = 'Resultado: ' + subtrair
+        
+        }
+          
+    }
+    </script>
+</body>
+</html>
+
+  
+
+       
+        
+
+       
+        
+       
+
+   
+    
+    
+  
